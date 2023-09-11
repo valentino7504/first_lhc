@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{% block title %}{% endblock %}</title>
+		<link rel="stylesheet" href="../static/css/base.css">
+		<link rel="stylesheet"
+			href="{{ url_for('static', filename='css/' + page_name + '.css') }}">
+	</head>
+	<body>
+		<header class="flex justify-between items-center pr-5 sm:pr-0 2xl:pr-36 flex-wrap pt-4">
+			<div class="logo flex items-center pl-4 sm:w-2/5 w-4/5 md:2/5">
+				<img src="../static/images/logo.png" alt class="md:w-14 w-10 inline invert">
+				<span class="logo-text">First LHC</span>
+			</div>
+			<div class="hamburger block sm:hidden">
+				<div class="burger-stroke"></div>
+				<div class="burger-stroke mt-2"></div>
+				<div class="burger-stroke mt-2"></div>
+			</div>
+			<nav class="sm:block hidden sm:relative sm:top-0 sm:bg-transparent sm:w-3/5 w-full md:w-2/5 lg:w-2/6 2xl:w-1/6">
+				<ul class="flex sm:flex-row flex-col text-center">
+					<li><a href="/" class="sm:w-24">Home</a></li>
+					<li><a href="about" class="sm:w-24">About</a></li>
+					<li><a href="contact" class="sm:w-24">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		{% block content %}{% endblock %}
+		<footer
+			class="flex lg:w-3/5 mx-auto justify-evenly flex-wrap items-stretch lg:items-start m:w-4/5 w-full">
+			<div class="useful-links w-full sm:w-1/2">
+				<h3 class="font-bold">Useful Links</h3>
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="about">About</a></li>
+					<li><a href="contact">Contact</a></li>
+				</ul>
+			</div>
+			<div class="footer-contact sm:w-1/2 mt-4 sm:mt-0 w-4/5">
+				<h3 class="text-center font-bold">Follow along</h3>
+				<div class="socials flex m-auto text-center justify-around">
+					<a href="https://www.reddit.com/user/Valentino_7504/">Reddit</a>
+					<a href="https://x.com/valentino_7504">Twitter/X</a>
+					<a href="https://instagram.com/valentino_7504">Instagram</a>
+				</div>
+			</div>
+			<p class="font-bold w-full">&copy; 2023 First LHC Ltd.</p>
+		</footer>
+		<script>const page = "{{ active_page }}"</script>
+		<script src="../static/js/base.js"></script>
+		<script src="{{ url_for('static', filename='js/' + page_name +'.js') }}"></script>
+	</body>
+</html>

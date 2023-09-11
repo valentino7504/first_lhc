@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+	background-color: theme("colors.pri");
+}
+nav li{
+	z-index: 0;
+}
+.key-benefits {
+	background-color: theme("colors.quad");
+	color: black;
+	font-size: 20px;
+}
+header {
+	background-color: #141928;
+}
+section.welcome {
+	width: 100%;
+	background-size: cover;
+	background-image: linear-gradient(to bottom, rgba(8, 14, 33, 0.8), rgb(8, 14, 33, 0.8)), url(trucks_bw.jpg);
+}
+.headline {
+	font-size: 48px;
+}
+.headline, .subheadline {
+	text-align: center;
+}
+.subheadline {
+	font-style: italic;
+	font-size: 20px;
+	margin-bottom: 50px;
+}
+button.get-started {
+	font-size: 18px;
+	background-color: theme("colors.ter");
+	border: 2px solid transparent;
+	padding: 10px 20px;
+	color: white;
+	border-radius: 15px;
+}
+button.get-started:hover {
+	background-color: transparent;
+	border: 2px solid white;
+}
+h2.usp-h {
+	font-size: 28px;
+	font-weight: bold;
+	text-align: center;
+}
+.usp-p {
+	font-size: 20px;
+}
+.usp-mainp>div {
+	width: 80%;
+	background-color: rgb(255, 255, 255, 0.6);
+	padding: 20px;
+	border-radius: 10px;
+	@apply flex flex-col md:w-1/2 m-5 xl:w-1/5;
+}
+.usp-mainp>div img {
+	@apply w-36 block mx-auto;
+}
+.usp-mainp>div p {
+	@apply text-justify;
+	color: #080E21;
+}
+img.usp-img {
+	width: 200px;
+	border-radius: 50%;
+	height: 200px;
+}
+.showcase-head {
+	@apply font-bold;
+}
+div.showcase>div {
+	@apply mt-8 sm:mt-0 w-full md:w-1/2;
+}
+.key-benefits img {
+	width: 10%;
+	display: block;
+	margin: auto auto;
+}
+footer {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+@media (min-width: 768px) {
+	.headline, .subheadline{
+		text-align: left;
+	}
+	section.welcome {
+		background-image: linear-gradient(to bottom right, theme("colors.pri"), rgb(8, 14, 33, 0.7)), url(trucks_bw.jpg);
+	}
+	header {
+		background-image: linear-gradient(to right, #080E21, #0E1424);
+	}
+	div.usp-p {
+		width: 100%;
+	}
+	p.usp-mainp {
+		padding: 0;
+	}
+}
