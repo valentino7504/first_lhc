@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 html {
-	background-color: theme("colors.pri");
+	background-color: #080E21;
 }
 nav li{
 	z-index: 0;
 }
 .key-benefits {
-	background-color: theme("colors.quad");
+	background-color: #CCCCCC;
 	color: black;
 	font-size: 20px;
 }
@@ -53,7 +53,7 @@ h2.usp-h {
 }
 .usp-mainp>div {
 	width: 80%;
-	background-color: rgb(255, 255, 255, 0.6);
+	background-color: rgba(255, 255, 255, 0.6);
 	padding: 20px;
 	border-radius: 10px;
 	@apply flex flex-col md:w-1/2 m-5 xl:w-1/5;
@@ -84,6 +84,7 @@ div.showcase>div {
 footer {
 	padding-top: 60px;
 	padding-bottom: 40px;
+	background-color: #080E21;
 }
 @media (min-width: 768px) {
 	.headline, .subheadline{

@@ -805,7 +805,7 @@ h2.usp-h {
 
 .usp-mainp>div {
   width: 80%;
-  background-color: rgb(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.6);
   padding: 20px;
   border-radius: 10px;
   margin: 1.25rem;
@@ -873,6 +873,7 @@ div.showcase>div {
 footer {
   padding-top: 60px;
   padding-bottom: 40px;
+  background-color: #080E21;
 }
 
 @media (min-width: 768px) {
